@@ -50,6 +50,7 @@
             <th scope="col">Recipe Name</th>
             <th scope="col">Recipe Description</th>
             <th scope="col">Image</th>
+            <th scope="col">Actions</th>
           </tr>
         </thead>
         <tbody>
@@ -60,6 +61,11 @@
             <td>{{ recipe.recipe_description }}</td>
             <td>
               <img src="/media/{{recipe.recipe_image}}" style="width: 100px" />
+            </td>
+            <td>
+              <a href="delete-recipe/{{recipe.id}}/" class="btn btn-danger"
+                >Delete</a
+              >
             </td>
           </tr>
           {% empty %}

@@ -9,7 +9,8 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('recipes/', recipes, name="recipes")
+    path('recipes/', recipes, name="recipes"),
+    path('delete-recipe/<id>/', delete_recipe, name="delete_recipe")
 ]
 
 if settings.DEBUG:
